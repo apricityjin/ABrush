@@ -1,6 +1,6 @@
 # ninja log v5
 21	827	1686139308824548925	CMakeFiles/untitled.dir/main.cpp.o	fb314392fa0be8bf
 827	915	1686139308913986022	untitled	ded12e99562a6b61
-0	136	1686140959938614668	build.ninja	bf4b9c5a11ddbded
+0	136	1686142000614021228	build.ninja	bf4b9c5a11ddbded
 22	210	1686139308208436063	CMakeFiles/untitled.dir/Point.cpp.o	e7ff46923397eaf4
 22	681	1686139308677226859	CMakeFiles/untitled.dir/Path.cpp.o	e172f55d3a5f1ae1
