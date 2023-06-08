@@ -7,5 +7,6 @@
 
 #include "Point.h"
 #include "Path.h"
+#include "Affine.h"
 
 #endif //UNTITLED_ABRUSH_H

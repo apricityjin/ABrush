@@ -1,6 +1,16 @@
 # ninja log v5
 21	827	1686139308824548925	CMakeFiles/untitled.dir/main.cpp.o	fb314392fa0be8bf
 827	915	1686139308913986022	untitled	ded12e99562a6b61
-0	136	1686193538412026726	build.ninja	bf4b9c5a11ddbded
+0	136	1686203924669714101	build.ninja	bf4b9c5a11ddbded
 22	210	1686139308208436063	CMakeFiles/untitled.dir/Point.cpp.o	e7ff46923397eaf4
 22	681	1686139308677226859	CMakeFiles/untitled.dir/Path.cpp.o	e172f55d3a5f1ae1
+106	199	1686221242044331669	CMakeFiles/untitled.dir/Point.cpp.o	50b018ad6b7dda3d
+106	327	1686221242171150368	CMakeFiles/untitled.dir/Affine.cpp.o	dbdfc5d79e945b35
+106	374	1686221242218442721	CMakeFiles/untitled.dir/Path.cpp.o	a98224cc7c290a3
+106	431	1686221242275665649	CMakeFiles/untitled.dir/main.cpp.o	582dc51537f0e4a2
+432	974	1686221242820067632	untitled	ed4bb96a226ea255
+6	34	1686223821086318587	CMakeFiles/untitled.dir/Point.cpp.o	50b018ad6b7dda3d
+6	215	1686223821266449925	CMakeFiles/untitled.dir/Affine.cpp.o	dbdfc5d79e945b35
+6	267	1686223821318375518	CMakeFiles/untitled.dir/Path.cpp.o	a98224cc7c290a3
+5	264	1686223830726381149	CMakeFiles/untitled.dir/main.cpp.o	582dc51537f0e4a2
+264	302	1686223830766028357	untitled	ed4bb96a226ea255

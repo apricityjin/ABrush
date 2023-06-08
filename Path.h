@@ -9,22 +9,26 @@
 #include <vector>
 
 // 我认为遇到 M 指令就是开始一条新的线段
-namespace ABrush {
-    class Path {
+namespace ABrush
+{
+    class Path
+    {
     public:
-        enum class Command : uint8_t {
+        enum class Command : uint8_t
+        {
             MoveTo,
             LineTo,
             CurveTo,
             Close,
         };
 
-        struct Contour {
-            uint32_t pointIndex = 0;
+        struct Contour
+        {
+            uint32_t pointIndex   = 0;
             uint32_t commandIndex = 0;
-            bool close = false;
+            bool     close        = false;
         };
-        std::vector<Point> points;
+        std::vector<Point>   points;
         std::vector<Command> commands;
         std::vector<Contour> contours;
 
@@ -33,20 +37,44 @@ namespace ABrush {
 
         virtual ~Path();
 
-        void moveTo(Point &p);
+        Path &moveTo(Point &p);
 
-        void moveTo(float x, float y);
+        Path &moveTo(double x, double y);
 
-        void lineTo(Point &p);
+        Path &lineTo(Point &p);
 
-        void lineTo(float x, float y);
+        Path &lineTo(double x, double y);
 
-        void curveTo(Point &p1, Point &p2, Point &endPoint);
+        Path &curveTo(Point &p1, Point &p2, Point &endPoint);
 
-        void curveTo(float x1, float y1, float x2, float y2, float end_x, float end_y);
+        Path &curveTo(double x1, double y1,
+                      double x2, double y2,
+                      double end_x, double end_y);
 
-        void close();
+        Path &close();
     };
+
+    void bezier(std::vector<Point> &bezierPoints,
+                std::vector<Point> &velocityPoints,
+                Point &start,
+                Point &p1,
+                Point &p2,
+                Point &end);
+
+    void recursive_bezier(std::vector<Point> &bezierPoints,
+                          std::vector<Point> &velocityPoints,
+                          int depth,
+                          Point &p0, Point &p1, Point &p2, Point &p3);
+
+    void addPoint(std::vector<Point> &points, Point &p);
+
+    void velocity(std::vector<Point> &points,
+                  Point &p0, Point &p1);
+    void velocity(std::vector<Point> &points,
+                  Point &p0, Point &p1, Point &p2, Point &p3);
+
+    std::vector<Point> normalLines(std::vector<Point> bezierPoints,
+                                   std::vector<Point> velocityPoints);
 }
 
 #endif //UNTITLED_PATH_H
