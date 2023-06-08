@@ -12,7 +12,7 @@ namespace ABrush
     Path::~Path()
     = default;
 
-    void Path::moveTo(Point p)
+    void Path::moveTo(Point &p)
     {
         Contour c;
         c.commandIndex = commands.size();
@@ -22,7 +22,7 @@ namespace ABrush
         points.push_back(p);
     }
 
-    void Path::lineTo(Point p)
+    void Path::lineTo(Point &p)
     {
         commands.push_back(Command::LineTo);
         points.push_back(p);
@@ -38,7 +38,7 @@ namespace ABrush
         commands.push_back(Command::Close);
     }
 
-    void Path::curveTo(Point p1, Point p2, Point endPoint)
+    void Path::curveTo(Point &p1, Point &p2, Point &endPoint)
     {
         commands.push_back(Command::CurveTo);
         points.push_back(p1);
@@ -48,21 +48,24 @@ namespace ABrush
 
     void Path::moveTo(float x, float y)
     {
-        moveTo(Point(x, y));
+        Point p = Point(x, y);
+        moveTo(p);
     }
 
     void Path::lineTo(float x, float y)
     {
-        lineTo(Point(x, y));
+        Point p = Point(x, y);
+        lineTo(p);
     }
 
     void Path::curveTo(float x1, float y1,
                        float x2, float y2,
                        float end_x, float end_y)
     {
-        curveTo(Point(x1, y1),
-                Point(x2, y2),
-                Point(end_x, end_y));
+        Point p1 = Point(x1, y1);
+        Point p2 = Point(x2, y2);
+        Point endPoint = Point(end_x, end_y);
+        curveTo(p1, p2, endPoint);
     }
 
 }

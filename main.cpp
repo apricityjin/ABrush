@@ -24,5 +24,7 @@ int main()
     path.lineTo(p1);
     path.close();
 
+    path.lineTo(p);
+
     return 0;
 }

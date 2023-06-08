@@ -9,26 +9,22 @@
 #include <vector>
 
 // 我认为遇到 M 指令就是开始一条新的线段
-namespace ABrush
-{
-    class Path
-    {
+namespace ABrush {
+    class Path {
     public:
-        enum class Command : uint8_t
-        {
+        enum class Command : uint8_t {
             MoveTo,
             LineTo,
             CurveTo,
             Close,
         };
 
-        struct Contour
-        {
+        struct Contour {
             uint32_t pointIndex = 0;
             uint32_t commandIndex = 0;
-            bool     close = false;
+            bool close = false;
         };
-        std::vector<Point>   points;
+        std::vector<Point> points;
         std::vector<Command> commands;
         std::vector<Contour> contours;
 
@@ -37,12 +33,18 @@ namespace ABrush
 
         virtual ~Path();
 
-        void moveTo(Point p);
+        void moveTo(Point &p);
+
         void moveTo(float x, float y);
-        void lineTo(Point p);
+
+        void lineTo(Point &p);
+
         void lineTo(float x, float y);
-        void curveTo(Point p1, Point p2, Point endPoint);
+
+        void curveTo(Point &p1, Point &p2, Point &endPoint);
+
         void curveTo(float x1, float y1, float x2, float y2, float end_x, float end_y);
+
         void close();
     };
 }
