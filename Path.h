@@ -66,10 +66,9 @@ namespace ABrush
                           int depth,
                           Point &p0, Point &p1, Point &p2, Point &p3);
 
-    void addPoint(std::vector<Point> &points, Point &p);
-
     void velocity(std::vector<Point> &points,
                   Point &p0, Point &p1);
+
     void velocity(std::vector<Point> &points,
                   Point &p0, Point &p1, Point &p2, Point &p3);
 

@@ -7,6 +7,7 @@
 
 #include "Path.h"
 #include "Point.h"
+#include <cmath>
 
 namespace ABrush
 {
@@ -48,15 +49,25 @@ namespace ABrush
                shx = 0.0,
                shy = 0.0;
 
+        Affine(double tx, double ty, double sx, double sy, double shx, double shy);
+
         Affine();
 
         virtual ~Affine();
 
+        /// 直接输入坐标进行变换
+        void transform(double *x, double *y) const;
+
+        /// 不做平移变换
+        void transform2x2(double *x, double *y) const;
+
         Affine &setIdentity();
 
-        bool isIdentity() const;
+        [[nodiscard]] bool isIdentity() const;
 
         Affine &translate(double x, double y);
+
+        Affine &translate(Point &p);
 
         Affine &translateX(double x);
 
@@ -65,6 +76,8 @@ namespace ABrush
         Affine &scale(double s);
 
         Affine &scale(double x, double y);
+
+        Affine &scale(Point &p);
 
         Affine &scaleX(double x);
 
@@ -78,13 +91,42 @@ namespace ABrush
 
         Affine &rotate(double a);
 
-        bool operator==(Affine &affine);
+        Affine &invert();
+
+        [[nodiscard]] bool isValid() const;
+
+        bool operator==(Affine const &affine) const;
+
+        bool operator!=(Affine &affine);
 
         Affine operator*(Affine &affine);
 
         Affine &operator*=(Affine &affine);
 
+        Affine operator~() const;
+
+        Affine operator/(Affine &affine) const;
+        Affine &operator/=(Affine &affine);
+
         Affine &multiply(Affine &affine);
+
+        Affine &multiplyInvert(Affine &affine);
+
+        Affine &preMultiply(Affine &affine);
+
+        Affine &preMultiplyInvert(Affine &affine);
+
+        /// 翻转 x
+        Affine &flipX();
+
+        /// 翻转 y
+        Affine &flipY();
+
+        /// 从数组 m 中加载
+        Affine &loadFrom(double *m);
+
+        /// 加载 affine 的数据
+        void storeTo(double *m) const;
     };
 
     Point operator*(Point &p, Affine &affine);

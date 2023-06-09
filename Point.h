@@ -19,6 +19,8 @@ namespace ABrush
 
         Point(double x, double y);
 
+        void setXY(double x, double y);
+
         Point operator-() const;
 
         Point operator+(Point &p) const;
@@ -35,16 +37,14 @@ namespace ABrush
 
         Point &operator*=(double a);
 
-        Point operator/(double d) const;
+        Point operator/(double a) const;
 
         Point &operator/=(double a);
 
-        void setXY(double x, double y);
-
         bool operator==(Point &p) const;
-
-        double length(const Point& p0, const Point& p1);
     };
+
+    double length(const Point &p0, const Point &p1);
 
     Point operator*(double a, Point &p);
 }

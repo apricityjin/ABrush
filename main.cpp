@@ -6,31 +6,26 @@ using namespace ABrush;
 
 int main()
 {
-    Point p  = Point(1.0, 1.0);
-    Point p1 = Point(2.0, 3.0);
-    Point p2 = Point(3.0, 5.0);
-    Point p3 = Point(4.0, 7.0);
-//    Path path = Path();
+//    Point p    = Point(1.0, 1.0);
+//    Point p1   = Point(2.0, 3.0);
+//    Point p2   = Point(3.0, 5.0);
+//    Point p3   = Point(4.0, 7.0);
+//    Path  path = Path();
 //
-//    path.moveTo(p);
-//    path.lineTo(p1);
-//    path.close();
-//    path.moveTo(p1);
-//    path.lineTo(p2);
-//    path.lineTo(p2);
-//    path.lineTo(p2);
-//    path.moveTo(p);
-//    path.lineTo(p1);
-//    path.close();
+//    path.moveTo(p).lineTo(p1).close().moveTo(p3).curveTo(p, p1, p2).close();
 //
-//    path.lineTo(p);
-
-    Affine a = Affine().translate(1.0, 2.0).scale(2.0);
-    p = p * a;
+//    Affine a = Affine().translate(1.0, 2.0).scale(2.0);
+//    p = p * a;
 
     vector<Point> bezierPoints;
+    vector<Point> velocityPoints;
 
-    bezier(bezierPoints, p,p1,p2,p3);
+    Point p0 = Point(100, 100),
+          p1 = Point(200, 100),
+          p2 = Point(200, 300),
+          p3 = Point(100, 300);
+
+    bezier(bezierPoints, velocityPoints, p0, p1, p2, p3);
 
     return 0;
 }

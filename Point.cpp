@@ -31,9 +31,9 @@ namespace ABrush
         return {this->x * p.x, this->y * p.y};
     }
 
-    Point Point::operator/(double d) const
+    Point Point::operator/(double a) const
     {
-        return {this->x / d, this->y / d};
+        return {this->x / a, this->y / a};
     }
 
     void Point::setXY(double new_x, double new_y)
@@ -86,10 +86,10 @@ namespace ABrush
         return {-this->x, -this->y};
     }
 
-    double Point::length(const Point& p0, const Point& p1)
+    double length(const Point &p0, const Point &p1)
     {
         double dx = p1.x - p0.x,
-               dy  = p1.y - p0.y;
+               dy = p1.y - p0.y;
         return sqrt(dx * dx + dy * dy);
     }
 

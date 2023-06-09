@@ -107,7 +107,7 @@ namespace ABrush
         double m_distance = 1;
         if ((d1 + d2) * (d1 + d2) < m_distance * (dx * dx + dy * dy)) {
             velocity(velocityPoints, p0, p1, p2, p3);
-            addPoint(bezierPoints, p0123);
+            bezierPoints.push_back(p0123);
             return;
         }
         recursive_bezier(bezierPoints, velocityPoints, depth + 1,
@@ -121,12 +121,9 @@ namespace ABrush
         points.push_back(p1 - p0);
     }
 
-    void ABrush::velocity(std::vector<Point> &points, Point &p0, Point &p1, Point &p2, Point &p3)
+    void velocity(std::vector<Point> &points, Point &p0, Point &p1, Point &p2, Point &p3)
     {
         Point p_v = (-p0 - p1 + p2 + p3) * 0.75;
-        
         points.push_back(p_v);
     }
-
-
 }

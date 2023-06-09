@@ -21,25 +21,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93e3523a-c3bf-48d4-a5b2-9e72e4018036" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Affine.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Affine.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABrush.h" beforeDir="false" afterPath="$PROJECT_DIR$/ABrush.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Affine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Affine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Affine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Affine.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Path.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Path.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Path.h" beforeDir="false" afterPath="$PROJECT_DIR$/Path.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Point.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Point.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Point.h" beforeDir="false" afterPath="$PROJECT_DIR$/Point.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-7e232071ecca017c04b6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-7127b8ebe4b99869a245.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-06-08T03-05-38-0444.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-untitled-Debug-d76ac0ec4088cede07df.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -122,7 +112,7 @@
       <workItem from="1686140960067" duration="636000" />
       <workItem from="1686193537636" duration="885000" />
       <workItem from="1686203729534" duration="29000" />
-      <workItem from="1686203846216" duration="22653000" />
+      <workItem from="1686203846216" duration="33815000" />
     </task>
     <servers />
   </component>
