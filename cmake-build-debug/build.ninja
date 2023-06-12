@@ -73,6 +73,60 @@ build CMakeFiles/untitled.dir/Affine.cpp.o: CXX_COMPILER__untitled_Debug /Users/
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir
 
+build CMakeFiles/untitled.dir/FillTessellator.cpp.o: CXX_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/FillTessellator.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/FillTessellator.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+
+build CMakeFiles/untitled.dir/libtess2/Source/tess.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/tess.c || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/tess.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+
+build CMakeFiles/untitled.dir/libtess2/Source/sweep.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/sweep.c || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/sweep.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+
+build CMakeFiles/untitled.dir/libtess2/Source/priorityq.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/priorityq.c || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/priorityq.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+
+build CMakeFiles/untitled.dir/libtess2/Source/mesh.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/mesh.c || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/mesh.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+
+build CMakeFiles/untitled.dir/libtess2/Source/geom.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/geom.c || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/geom.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+
+build CMakeFiles/untitled.dir/libtess2/Source/dict.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/dict.c || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/dict.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+
+build CMakeFiles/untitled.dir/libtess2/Source/bucketalloc.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/bucketalloc.c || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/bucketalloc.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+
+build CMakeFiles/untitled.dir/StrokeTessellator.cpp.o: CXX_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/StrokeTessellator.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/StrokeTessellator.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -81,7 +135,7 @@ build CMakeFiles/untitled.dir/Affine.cpp.o: CXX_COMPILER__untitled_Debug /Users/
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Point.cpp.o CMakeFiles/untitled.dir/Path.cpp.o CMakeFiles/untitled.dir/Affine.cpp.o
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Point.cpp.o CMakeFiles/untitled.dir/Path.cpp.o CMakeFiles/untitled.dir/Affine.cpp.o CMakeFiles/untitled.dir/FillTessellator.cpp.o CMakeFiles/untitled.dir/libtess2/Source/tess.c.o CMakeFiles/untitled.dir/libtess2/Source/sweep.c.o CMakeFiles/untitled.dir/libtess2/Source/priorityq.c.o CMakeFiles/untitled.dir/libtess2/Source/mesh.c.o CMakeFiles/untitled.dir/libtess2/Source/geom.c.o CMakeFiles/untitled.dir/libtess2/Source/dict.c.o CMakeFiles/untitled.dir/libtess2/Source/bucketalloc.c.o CMakeFiles/untitled.dir/StrokeTessellator.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :

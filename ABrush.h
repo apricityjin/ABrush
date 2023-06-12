@@ -8,5 +8,7 @@
 #include "Point.h"
 #include "Path.h"
 #include "Affine.h"
+#include "FillTessellator.h"
+#include "StrokeTessellator.h"
 
 #endif //UNTITLED_ABRUSH_H

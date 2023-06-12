@@ -37,6 +37,7 @@ namespace ABrush
             c = &contours.back();
         }
         c->close = true;
+        points.push_back(this->points.at(c->pointIndex));
         commands.push_back(Command::Close);
         return *this;
     }
@@ -75,20 +76,61 @@ namespace ABrush
         return *this;
     }
 
+    Path Path::flatten()
+    {
+        Path p = Path();
+        int ptIdx = 0;
+        for (Command &cmd: commands) {
+            switch (cmd) {
+
+                case Command::MoveTo:
+                    p.moveTo(points.at(ptIdx));
+                    ptIdx++;
+                    break;
+                case Command::LineTo:
+                    p.lineTo(points.at(ptIdx));
+                    ptIdx++;
+                    break;
+                case Command::CurveTo:
+                    p.commands.push_back(Command::CurveTo);
+                    bezier(p.points,
+                           points.at(ptIdx - 1),
+                           points.at(ptIdx),
+                           points.at(ptIdx + 1),
+                           points.at(ptIdx + 2));
+                    ptIdx += 3;
+                    break;
+                case Command::Close:
+                    p.close();
+                    ptIdx++;
+                    break;
+            }
+        }
+        return p;
+    }
+
+    double *Path::store() const
+    {
+        size_t points_count = points.size();
+        double *m;
+        m = (double *) calloc(points_count * 2, sizeof(double));
+        for (int i = 0; i < points_count; ++i) {
+            m[i * 2] = points.at(i).x;
+            m[i * 2 + 1] = points.at(i).y;
+        }
+        return m;
+    }
+
     void bezier(std::vector<Point> &bezierPoints,
-                std::vector<Point> &velocityPoints,
                 Point &start, Point &p1, Point &p2, Point &end)
     {
-        bezierPoints.emplace_back(start);
-        velocity(velocityPoints, start, p1);
-        recursive_bezier(bezierPoints, velocityPoints, 0,
+        recursive_bezier(bezierPoints,
+                         0,
                          start, p1, p2, end);
         bezierPoints.emplace_back(end);
-        velocity(velocityPoints, p2, end);
     }
 
     void recursive_bezier(std::vector<Point> &bezierPoints,
-                          std::vector<Point> &velocityPoints,
                           int depth,
                           Point &p0, Point &p1, Point &p2, Point &p3)
     {
@@ -106,24 +148,14 @@ namespace ABrush
         double d2         = fabs((p2.x - p3.x) * dy - (p2.y - p3.y) * dx);
         double m_distance = 1;
         if ((d1 + d2) * (d1 + d2) < m_distance * (dx * dx + dy * dy)) {
-            velocity(velocityPoints, p0, p1, p2, p3);
             bezierPoints.push_back(p0123);
             return;
         }
-        recursive_bezier(bezierPoints, velocityPoints, depth + 1,
+        recursive_bezier(bezierPoints,
+                         depth + 1,
                          p0, p01, p012, p0123);
-        recursive_bezier(bezierPoints, velocityPoints, depth + 1,
+        recursive_bezier(bezierPoints,
+                          depth + 1,
                          p0123, p123, p23, p3);
-    }
-
-    void velocity(std::vector<Point> &points, Point &p0, Point &p1)
-    {
-        points.push_back(p1 - p0);
-    }
-
-    void velocity(std::vector<Point> &points, Point &p0, Point &p1, Point &p2, Point &p3)
-    {
-        Point p_v = (-p0 - p1 + p2 + p3) * 0.75;
-        points.push_back(p_v);
     }
 }

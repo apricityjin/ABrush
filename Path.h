@@ -52,28 +52,21 @@ namespace ABrush
                       double end_x, double end_y);
 
         Path &close();
+
+        Path flatten();
+
+        [[nodiscard]] double * store() const;
     };
 
     void bezier(std::vector<Point> &bezierPoints,
-                std::vector<Point> &velocityPoints,
                 Point &start,
                 Point &p1,
                 Point &p2,
                 Point &end);
 
     void recursive_bezier(std::vector<Point> &bezierPoints,
-                          std::vector<Point> &velocityPoints,
                           int depth,
                           Point &p0, Point &p1, Point &p2, Point &p3);
-
-    void velocity(std::vector<Point> &points,
-                  Point &p0, Point &p1);
-
-    void velocity(std::vector<Point> &points,
-                  Point &p0, Point &p1, Point &p2, Point &p3);
-
-    std::vector<Point> normalLines(std::vector<Point> bezierPoints,
-                                   std::vector<Point> velocityPoints);
 }
 
 #endif //UNTITLED_PATH_H

@@ -230,7 +230,7 @@ namespace ABrush
         return result;
     }
 
-    bool Affine::operator!=(Affine &affine)
+    bool Affine::operator!=(Affine &affine) const
     {
         return !(*this == affine);
     }

@@ -6,26 +6,25 @@ using namespace ABrush;
 
 int main()
 {
-//    Point p    = Point(1.0, 1.0);
-//    Point p1   = Point(2.0, 3.0);
-//    Point p2   = Point(3.0, 5.0);
-//    Point p3   = Point(4.0, 7.0);
-//    Path  path = Path();
-//
-//    path.moveTo(p).lineTo(p1).close().moveTo(p3).curveTo(p, p1, p2).close();
-//
-//    Affine a = Affine().translate(1.0, 2.0).scale(2.0);
-//    p = p * a;
+    Point p0   = Point(100.0, 50.0);
+    Point p1   = Point(60.0, 300.0);
+    Point p2   = Point(200.0, 150.0);
+    Point p3   = Point(300.0, 400.0);
+    Point p4   = Point(200.0, 400.0);
+    Point p5   = Point(150.0, 100.0);
+    Path  path = Path();
+    path
+//    .moveTo(p0).lineTo(p1).close()
+    .moveTo(p5).curveTo(p2, p3, p4).close();
+//    .moveTo(p2).lineTo(p3).close();
 
-    vector<Point> bezierPoints;
-    vector<Point> velocityPoints;
+    Path flattenPath = path.flatten();
 
-    Point p0 = Point(100, 100),
-          p1 = Point(200, 100),
-          p2 = Point(200, 300),
-          p3 = Point(100, 300);
-
-    bezier(bezierPoints, velocityPoints, p0, p1, p2, p3);
+//    FillTessellator tessellator = FillTessellator();
+//    tessellator.fill(flattenPath);
+    StrokeTessellator strokeTessellator = StrokeTessellator();
+    strokeTessellator.line_join_style = ABrush::StrokeTessellator::LineJoin::LineJoinMiter;
+    strokeTessellator.stroke(flattenPath);
 
     return 0;
 }

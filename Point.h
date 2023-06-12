@@ -15,8 +15,6 @@ namespace ABrush
     public:
         Point();
 
-        virtual ~Point();
-
         Point(double x, double y);
 
         void setXY(double x, double y);

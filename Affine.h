@@ -97,7 +97,7 @@ namespace ABrush
 
         bool operator==(Affine const &affine) const;
 
-        bool operator!=(Affine &affine);
+        bool operator!=(Affine &affine) const;
 
         Affine operator*(Affine &affine);
 
