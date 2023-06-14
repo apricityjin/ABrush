@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/apricity/CLionProjects/ABrush/cmake-build-debug",
-		"source" : "/Users/apricity/CLionProjects/ABrush"
+		"build" : "/Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug",
+		"source" : "/Users/apricity/Desktop/GitHub/ABrush"
 	},
 	"version" : 
 	{

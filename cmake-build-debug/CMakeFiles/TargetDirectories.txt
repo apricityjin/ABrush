@@ -1,3 +1,3 @@
-/Users/apricity/CLionProjects/ABrush/cmake-build-debug/CMakeFiles/ABrush.dir
-/Users/apricity/CLionProjects/ABrush/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/apricity/CLionProjects/ABrush/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug/CMakeFiles/ABrush.dir
+/Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug/CMakeFiles/rebuild_cache.dir

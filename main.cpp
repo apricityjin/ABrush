@@ -20,7 +20,7 @@ int main()
 //    FillTessellator tessellator = FillTessellator();
 //    tessellator.fill(flattenPath);
     StrokeTessellator tessellator = StrokeTessellator();
-    tessellator.line_join_style = StrokeTessellator::LineJoin::LineJoinRound;
+    tessellator.line_join_style = StrokeTessellator::LineJoin::LineJoinBevel;
     tessellator.stroke(flattenPath, path.contours.size());
 
     return 0;

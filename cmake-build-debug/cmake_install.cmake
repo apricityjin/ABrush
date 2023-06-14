@@ -1,4 +1,4 @@
-# Install script for directory: /Users/apricity/CLionProjects/ABrush
+# Install script for directory: /Users/apricity/Desktop/GitHub/ABrush
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/apricity/CLionProjects/ABrush/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

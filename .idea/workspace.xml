@@ -11,7 +11,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="ABrush" targetName="untitled" />
+      <config projectName="ABrush" targetName="ABrush" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -21,46 +21,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93e3523a-c3bf-48d4-a5b2-9e72e4018036" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/FillTessellator.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FillTessellator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StrokeTessellator.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StrokeTessellator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Include/tesselator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/bucketalloc.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/bucketalloc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/dict.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/dict.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/geom.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/geom.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/mesh.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/mesh.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/priorityq.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/priorityq.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/sweep.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/sweep.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/tess.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libtess2/Source/tess.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ABrush.h" beforeDir="false" afterPath="$PROJECT_DIR$/ABrush.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Affine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Affine.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Affine.h" beforeDir="false" afterPath="$PROJECT_DIR$/Affine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Path.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Path.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Path.h" beforeDir="false" afterPath="$PROJECT_DIR$/Path.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Point.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Point.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Point.h" beforeDir="false" afterPath="$PROJECT_DIR$/Point.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-c8de1cedde315dbe87fa.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-06-08T05-58-44-0682.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-untitled-Debug-c6cc65545f570fb415a0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StrokeTessellator.h" beforeDir="false" afterPath="$PROJECT_DIR$/StrokeTessellator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Affine.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Affine.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Path.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Path.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ABrush" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ABrush" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,22 +86,22 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake 应用程序.untitled">
+  <component name="RunManager" selected="CMake 应用程序.ABrush">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ABrush" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ABrush" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ABrush" RUN_TARGET_NAME="untitled">
+    <configuration name="ABrush" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ABrush" TARGET_NAME="ABrush" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ABrush" RUN_TARGET_NAME="ABrush">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake 应用程序.untitled" />
+      <item itemvalue="CMake 应用程序.ABrush" />
       <item itemvalue="CMake 调试.ABrush" />
     </list>
   </component>
@@ -151,6 +120,7 @@
       <workItem from="1686203729534" duration="29000" />
       <workItem from="1686203846216" duration="42556000" />
       <workItem from="1686386744048" duration="35475000" />
+      <workItem from="1686741218446" duration="4756000" />
     </task>
     <servers />
   </component>
@@ -165,17 +135,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/FillTessellator.cpp</url>
-          <line>42</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
