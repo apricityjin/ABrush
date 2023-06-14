@@ -1,14 +1,14 @@
 //
-// Created by apricity on 2023/6/7.
+// Created by apricity on 2023/6/13.
 //
 
-#ifndef UNTITLED_ABRUSH_H
-#define UNTITLED_ABRUSH_H
+#ifndef ABRUSH_ABRUSH_H
+#define ABRUSH_ABRUSH_H
 
-#include "Point.h"
-#include "Path.h"
+#include "Point.h" // Point
 #include "Affine.h"
+#include "Path.h"
 #include "FillTessellator.h"
 #include "StrokeTessellator.h"
 
-#endif //UNTITLED_ABRUSH_H
+#endif //ABRUSH_ABRUSH_H

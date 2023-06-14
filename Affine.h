@@ -1,13 +1,11 @@
 //
-// Created by apricity on 2023/6/8.
+// Created by apricity on 2023/6/13.
 //
 
 #ifndef ABRUSH_AFFINE_H
 #define ABRUSH_AFFINE_H
 
-#include "Path.h"
 #include "Point.h"
-#include <cmath>
 
 namespace ABrush
 {
@@ -42,96 +40,278 @@ namespace ABrush
     class Affine
     {
     public:
-        double tx  = 0.0,
-               ty  = 0.0,
-               sx  = 1.0,
-               sy  = 1.0,
-               shx = 0.0,
-               shy = 0.0;
+        Affine() : sx(1.0), shy(0.0), shx(0.0), sy(1.0), tx(0.0), ty(0.0)
+        {}
 
-        Affine(double tx, double ty, double sx, double sy, double shx, double shy);
+        Affine(float sx, float shy, float shx, float sy, float tx, float ty) :
+                sx(sx), shy(shy), shx(shx), sy(sy), tx(tx), ty(ty)
+        {}
 
-        Affine();
+        Affine &translate(float x, float y)
+        {
+            tx += x;
+            ty += y;
+            return *this;
+        }
 
-        virtual ~Affine();
+        Affine &scale(float s)
+        {
+            sx *= s;
+            sy *= s;
+            tx *= s;
+            ty *= s;
+            shx *= s;
+            shy *= s;
+            return *this;
+        }
 
-        /// 直接输入坐标进行变换
-        void transform(double *x, double *y) const;
+        Affine &rotate(float a)
+        {
+            float ca = cos(a);
+            float sa = sin(a);
+            float t0 = sx * ca - shy * sa;
+            float t2 = shx * ca - sy * sa;
+            float t4 = tx * ca - ty * sa;
+            shy = sx * sa + shy * ca;
+            sy  = shx * sa + sy * ca;
+            ty  = tx * sa + ty * ca;
+            sx  = t0;
+            shx = t2;
+            tx  = t4;
+            return *this;
+        }
 
-        /// 不做平移变换
-        void transform2x2(double *x, double *y) const;
+        Affine &translateX(float x)
+        {
+            tx += x;
+            return *this;
+        }
 
-        Affine &setIdentity();
+        Affine &translateY(float y)
+        {
+            ty += y;
+            return *this;
+        }
 
-        [[nodiscard]] bool isIdentity() const;
+        Affine &scaleX(float x)
+        {
+            sx *= x;
+            shx *= x;
+            tx *= x;
+            return *this;
+        }
 
-        Affine &translate(double x, double y);
+        Affine &scaleY(float y)
+        {
+            shy *= y;
+            sy *= y;
+            ty *= y;
+            return *this;
+        }
 
-        Affine &translate(Point &p);
+        Affine &shear(float x, float y)
+        {
+            sx += shy * x;
+            shx += sy * x;
+            tx += ty * x;
+            sy += shx * y;
+            shy += sx * y;
+            ty += tx * y;
+            return *this;
+        }
 
-        Affine &translateX(double x);
+        Affine &shearX(float x)
+        {
+            sx += shy * x;
+            shx += sy * x;
+            tx += ty * x;
+            return *this;
+        }
 
-        Affine &translateY(double y);
+        Affine &shearY(float y)
+        {
+            sy += shx * y;
+            shy += sx * y;
+            ty += tx * y;
+            return *this;
+        }
 
-        Affine &scale(double s);
+        Affine &scale(float x, float y)
+        {
+            sx *= x;
+            shx *= x;
+            tx *= x;
+            shy *= y;
+            sy *= y;
+            ty *= y;
+            return *this;
+        }
 
-        Affine &scale(double x, double y);
+        Affine &multiply(ABrush::Affine &affine)
+        {
+            float t0 = sx * affine.sx + shy * affine.shx;
+            float t2 = shx * affine.sx + sy * affine.shx;
+            float t4 = tx * affine.sx + ty * affine.shx + affine.tx;
+            shy = sx * affine.shy + shy * affine.sy;
+            sy  = shx * affine.shy + sy * affine.sy;
+            ty  = tx * affine.shy + ty * affine.sy + affine.ty;
+            sx  = t0;
+            shx = t2;
+            tx  = t4;
+            return *this;
+        }
 
-        Affine &scale(Point &p);
+        Affine &setIdentity()
+        {
+            sx = sy = 1.0;
+            tx = ty = shx = shy = 0.0;
+            return *this;
+        }
 
-        Affine &scaleX(double x);
+        [[nodiscard]] bool isIdentity() const
+        {
+            return almost_equal(sx, static_cast<float>(1)) &&
+                   almost_equal(sy, static_cast<float>(1))&&
+                   almost_equal(tx, static_cast<float>(0))&&
+                   almost_equal(ty, static_cast<float>(0))&&
+                   almost_equal(shx,static_cast<float>(0)) &&
+                   almost_equal(shy,static_cast<float>(0));
+        }
 
-        Affine &scaleY(double y);
+        Affine &invert()
+        {
+            float d  = static_cast<float>(1) / (sx * sy - shy * shx);
+            float t0 = sy * d;
+            sy  = sx * d;
+            shy = -shy * d;
+            shx = -shx * d;
 
-        Affine &shear(double x, double y);
+            float t4 = -tx * t0 - ty * shx;
+            ty = -tx * shy - ty * sy;
 
-        Affine &shearX(double x);
+            sx = t0;
+            tx = t4;
+            return *this;
+        }
 
-        Affine &shearY(double y);
+        Affine &flipX()
+        {
+            sx  = -sx;
+            shy = -shy;
+            tx  = -tx;
+            return *this;
+        }
 
-        Affine &rotate(double a);
+        Affine &flipY()
+        {
+            shx = -shx;
+            sy  = -sy;
+            ty  = -ty;
+            return *this;
+        }
 
-        Affine &invert();
+        void transform(float *x, float *y) const
+        {
+            float temp = *x;
+            *x = temp * sx + *y * shx + tx;
+            *y = temp * shy + *y * sy + ty;
+        }
 
-        [[nodiscard]] bool isValid() const;
+        void transform2x2(float *x, float *y) const
+        {
+            float temp = *x;
+            *x = temp * sx + *y * shx;
+            *y = temp * shy + *y * sy;
+        }
 
-        bool operator==(Affine const &affine) const;
+        Affine &multiplyInvert(Affine &affine)
+        {
+            Affine t = affine;
+            t.invert();
+            return multiply(t);
+        }
 
-        bool operator!=(Affine &affine) const;
+        Affine &preMultiply(Affine &affine)
+        {
+            Affine t = affine;
+            return *this = t.multiply(*this);
+        }
 
-        Affine operator*(Affine &affine);
+        Affine &preMultiplyInvert(Affine &affine)
+        {
+            Affine t = affine;
+            t.invert();
+            return *this = t.multiply(*this);
+        }
 
-        Affine &operator*=(Affine &affine);
+        Affine operator*(Affine &affine)
+        {
+            Affine result = *this;
+            result *= affine;
+            return result;
+        }
 
-        Affine operator~() const;
+        Affine &operator*=(Affine &affine)
+        {
+            multiply(affine);
+            return *this;
+        }
 
-        Affine operator/(Affine &affine) const;
-        Affine &operator/=(Affine &affine);
+        Affine operator/(Affine &affine) const
+        {
+            Affine result = *this;
+            result /= affine;
+            return result;
+        }
 
-        Affine &multiply(Affine &affine);
+        Affine &operator/=(Affine &affine)
+        {
+            preMultiply(affine);
+            return *this;
+        }
 
-        Affine &multiplyInvert(Affine &affine);
+        Affine operator~() const
+        {
+            Affine result = *this;
+            result.invert();
+            return result;
+        }
 
-        Affine &preMultiply(Affine &affine);
+        bool operator!=(Affine &affine) const
+        {
+            return !(*this == affine);
+        }
 
-        Affine &preMultiplyInvert(Affine &affine);
+        bool operator==(Affine &affine) const
+        {
+            return almost_equal(sx, static_cast<float>(1.0))&&
+                   almost_equal(sy, static_cast<float>(1.0))&&
+                   almost_equal(shx,static_cast<float>(0.0)) &&
+                   almost_equal(shy,static_cast<float>(0.0)) &&
+                   almost_equal(tx, static_cast<float>(0.0))&&
+                   almost_equal(ty, static_cast<float>(0.0));
+        }
 
-        /// 翻转 x
-        Affine &flipX();
-
-        /// 翻转 y
-        Affine &flipY();
-
-        /// 从数组 m 中加载
-        Affine &loadFrom(double *m);
-
-        /// 加载 affine 的数据
-        void storeTo(double *m) const;
+        float sx  = 1.0, shy = 0.0,
+               shx = 0.0, sy = 1.0,
+               tx  = 0.0, ty = 0.0;
     };
 
-    Point operator*(Point &p, Affine &affine);
+    Point operator*(Point &p, Affine &affine)
+    {
+        Point result = Point();
+        result.x = p.x * affine.sx + p.y * affine.shx + affine.tx;
+        result.y = p.x * affine.shy + p.y * affine.sy + affine.ty;
+        return result;
+    }
 
-    Point &operator*=(Point &p, Affine &affine);
+    Point &operator*=(Point &p, Affine &affine)
+    {
+        float x = p.x, y = p.y;
+        p.x = x * affine.sx + y * affine.shx + affine.tx;
+        p.y = x * affine.shy + y * affine.sy + affine.ty;
+        return p;
+    }
 }
 
 #endif //ABRUSH_AFFINE_H

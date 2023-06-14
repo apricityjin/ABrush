@@ -1,7 +1,6 @@
 #include <iostream>
 #include "ABrush.h"
 
-using namespace std;
 using namespace ABrush;
 
 int main()
@@ -14,17 +13,15 @@ int main()
     Point p5   = Point(150.0, 100.0);
     Path  path = Path();
     path
-//    .moveTo(p0).lineTo(p1).close()
-    .moveTo(p5).curveTo(p2, p3, p4).close();
-//    .moveTo(p2).lineTo(p3).close();
+//            .moveTo(p0).lineTo(p1);
+            .moveTo(p5).curveTo(p2, p3, p4).close();
 
-    Path flattenPath = path.flatten();
-
+    Path * flattenPath = path.flatten();
 //    FillTessellator tessellator = FillTessellator();
 //    tessellator.fill(flattenPath);
-    StrokeTessellator strokeTessellator = StrokeTessellator();
-    strokeTessellator.line_join_style = ABrush::StrokeTessellator::LineJoin::LineJoinMiter;
-    strokeTessellator.stroke(flattenPath);
+    StrokeTessellator tessellator = StrokeTessellator();
+    tessellator.line_join_style = StrokeTessellator::LineJoin::LineJoinRound;
+    tessellator.stroke(flattenPath, path.contours.size());
 
     return 0;
 }

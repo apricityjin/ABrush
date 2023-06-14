@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/apricity/Desktop/GitHub/ABrush -B /Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/apricity/CLionProjects/ABrush -B /Users/apricity/CLionProjects/ABrush/cmake-build-debug
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug
+-- Build files have been written to: /Users/apricity/CLionProjects/ABrush/cmake-build-debug

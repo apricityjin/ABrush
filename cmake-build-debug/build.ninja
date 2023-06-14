@@ -39,116 +39,86 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug/
+cmake_ninja_workdir = /Users/apricity/CLionProjects/ABrush/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target untitled
+# Object build statements for EXECUTABLE target ABrush
 
 
 #############################################
-# Order-only phony target for untitled
+# Order-only phony target for ABrush
 
-build cmake_object_order_depends_target_untitled: phony || CMakeFiles/untitled.dir
+build cmake_object_order_depends_target_ABrush: phony || CMakeFiles/ABrush.dir
 
-build CMakeFiles/untitled.dir/main.cpp.o: CXX_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/main.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/main.cpp.o.d
+build CMakeFiles/ABrush.dir/main.cpp.o: CXX_COMPILER__ABrush_Debug /Users/apricity/CLionProjects/ABrush/main.cpp || cmake_object_order_depends_target_ABrush
+  DEP_FILE = CMakeFiles/ABrush.dir/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+  OBJECT_DIR = CMakeFiles/ABrush.dir
+  OBJECT_FILE_DIR = CMakeFiles/ABrush.dir
 
-build CMakeFiles/untitled.dir/Point.cpp.o: CXX_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/Point.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/Point.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
-
-build CMakeFiles/untitled.dir/Path.cpp.o: CXX_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/Path.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/Path.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
-
-build CMakeFiles/untitled.dir/Affine.cpp.o: CXX_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/Affine.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/Affine.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
-
-build CMakeFiles/untitled.dir/FillTessellator.cpp.o: CXX_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/FillTessellator.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/FillTessellator.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
-
-build CMakeFiles/untitled.dir/libtess2/Source/tess.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/tess.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/tess.c.o.d
+build CMakeFiles/ABrush.dir/libtess2/Source/bucketalloc.c.o: C_COMPILER__ABrush_Debug /Users/apricity/CLionProjects/ABrush/libtess2/Source/bucketalloc.c || cmake_object_order_depends_target_ABrush
+  DEP_FILE = CMakeFiles/ABrush.dir/libtess2/Source/bucketalloc.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+  OBJECT_DIR = CMakeFiles/ABrush.dir
+  OBJECT_FILE_DIR = CMakeFiles/ABrush.dir/libtess2/Source
 
-build CMakeFiles/untitled.dir/libtess2/Source/sweep.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/sweep.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/sweep.c.o.d
+build CMakeFiles/ABrush.dir/libtess2/Source/dict.c.o: C_COMPILER__ABrush_Debug /Users/apricity/CLionProjects/ABrush/libtess2/Source/dict.c || cmake_object_order_depends_target_ABrush
+  DEP_FILE = CMakeFiles/ABrush.dir/libtess2/Source/dict.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+  OBJECT_DIR = CMakeFiles/ABrush.dir
+  OBJECT_FILE_DIR = CMakeFiles/ABrush.dir/libtess2/Source
 
-build CMakeFiles/untitled.dir/libtess2/Source/priorityq.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/priorityq.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/priorityq.c.o.d
+build CMakeFiles/ABrush.dir/libtess2/Source/geom.c.o: C_COMPILER__ABrush_Debug /Users/apricity/CLionProjects/ABrush/libtess2/Source/geom.c || cmake_object_order_depends_target_ABrush
+  DEP_FILE = CMakeFiles/ABrush.dir/libtess2/Source/geom.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+  OBJECT_DIR = CMakeFiles/ABrush.dir
+  OBJECT_FILE_DIR = CMakeFiles/ABrush.dir/libtess2/Source
 
-build CMakeFiles/untitled.dir/libtess2/Source/mesh.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/mesh.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/mesh.c.o.d
+build CMakeFiles/ABrush.dir/libtess2/Source/mesh.c.o: C_COMPILER__ABrush_Debug /Users/apricity/CLionProjects/ABrush/libtess2/Source/mesh.c || cmake_object_order_depends_target_ABrush
+  DEP_FILE = CMakeFiles/ABrush.dir/libtess2/Source/mesh.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+  OBJECT_DIR = CMakeFiles/ABrush.dir
+  OBJECT_FILE_DIR = CMakeFiles/ABrush.dir/libtess2/Source
 
-build CMakeFiles/untitled.dir/libtess2/Source/geom.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/geom.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/geom.c.o.d
+build CMakeFiles/ABrush.dir/libtess2/Source/priorityq.c.o: C_COMPILER__ABrush_Debug /Users/apricity/CLionProjects/ABrush/libtess2/Source/priorityq.c || cmake_object_order_depends_target_ABrush
+  DEP_FILE = CMakeFiles/ABrush.dir/libtess2/Source/priorityq.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+  OBJECT_DIR = CMakeFiles/ABrush.dir
+  OBJECT_FILE_DIR = CMakeFiles/ABrush.dir/libtess2/Source
 
-build CMakeFiles/untitled.dir/libtess2/Source/dict.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/dict.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/dict.c.o.d
+build CMakeFiles/ABrush.dir/libtess2/Source/sweep.c.o: C_COMPILER__ABrush_Debug /Users/apricity/CLionProjects/ABrush/libtess2/Source/sweep.c || cmake_object_order_depends_target_ABrush
+  DEP_FILE = CMakeFiles/ABrush.dir/libtess2/Source/sweep.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
+  OBJECT_DIR = CMakeFiles/ABrush.dir
+  OBJECT_FILE_DIR = CMakeFiles/ABrush.dir/libtess2/Source
 
-build CMakeFiles/untitled.dir/libtess2/Source/bucketalloc.c.o: C_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/libtess2/Source/bucketalloc.c || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/libtess2/Source/bucketalloc.c.o.d
+build CMakeFiles/ABrush.dir/libtess2/Source/tess.c.o: C_COMPILER__ABrush_Debug /Users/apricity/CLionProjects/ABrush/libtess2/Source/tess.c || cmake_object_order_depends_target_ABrush
+  DEP_FILE = CMakeFiles/ABrush.dir/libtess2/Source/tess.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/libtess2/Source
-
-build CMakeFiles/untitled.dir/StrokeTessellator.cpp.o: CXX_COMPILER__untitled_Debug /Users/apricity/Desktop/GitHub/ABrush/StrokeTessellator.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/StrokeTessellator.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+  OBJECT_DIR = CMakeFiles/ABrush.dir
+  OBJECT_FILE_DIR = CMakeFiles/ABrush.dir/libtess2/Source
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target untitled
+# Link build statements for EXECUTABLE target ABrush
 
 
 #############################################
-# Link the executable untitled
+# Link the executable ABrush
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Point.cpp.o CMakeFiles/untitled.dir/Path.cpp.o CMakeFiles/untitled.dir/Affine.cpp.o CMakeFiles/untitled.dir/FillTessellator.cpp.o CMakeFiles/untitled.dir/libtess2/Source/tess.c.o CMakeFiles/untitled.dir/libtess2/Source/sweep.c.o CMakeFiles/untitled.dir/libtess2/Source/priorityq.c.o CMakeFiles/untitled.dir/libtess2/Source/mesh.c.o CMakeFiles/untitled.dir/libtess2/Source/geom.c.o CMakeFiles/untitled.dir/libtess2/Source/dict.c.o CMakeFiles/untitled.dir/libtess2/Source/bucketalloc.c.o CMakeFiles/untitled.dir/StrokeTessellator.cpp.o
+build ABrush: CXX_EXECUTABLE_LINKER__ABrush_Debug CMakeFiles/ABrush.dir/main.cpp.o CMakeFiles/ABrush.dir/libtess2/Source/bucketalloc.c.o CMakeFiles/ABrush.dir/libtess2/Source/dict.c.o CMakeFiles/ABrush.dir/libtess2/Source/geom.c.o CMakeFiles/ABrush.dir/libtess2/Source/mesh.c.o CMakeFiles/ABrush.dir/libtess2/Source/priorityq.c.o CMakeFiles/ABrush.dir/libtess2/Source/sweep.c.o CMakeFiles/ABrush.dir/libtess2/Source/tess.c.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
-  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_DIR = CMakeFiles/ABrush.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = untitled
-  TARGET_PDB = untitled.dbg
+  TARGET_FILE = ABrush
+  TARGET_PDB = ABrush.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/apricity/CLionProjects/ABrush/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -159,7 +129,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/apricity/Desktop/GitHub/ABrush -B/Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug
+  COMMAND = cd /Users/apricity/CLionProjects/ABrush/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/apricity/CLionProjects/ABrush -B/Users/apricity/CLionProjects/ABrush/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -175,9 +145,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug
+# Folder: /Users/apricity/CLionProjects/ABrush/cmake-build-debug
 
-build all: phony untitled
+build all: phony ABrush
 
 # =============================================================================
 # Built-in targets
@@ -186,14 +156,14 @@ build all: phony untitled
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/UnixPaths.cmake /Users/apricity/Desktop/GitHub/ABrush/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/UnixPaths.cmake /Users/apricity/CLionProjects/ABrush/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/UnixPaths.cmake /Users/apricity/Desktop/GitHub/ABrush/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.25/Modules/Platform/UnixPaths.cmake /Users/apricity/CLionProjects/ABrush/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake: phony
 
 
 #############################################

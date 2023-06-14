@@ -150,8 +150,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug",
-		"source" : "/Users/apricity/Desktop/GitHub/ABrush"
+		"build" : "/Users/apricity/CLionProjects/ABrush/cmake-build-debug",
+		"source" : "/Users/apricity/CLionProjects/ABrush"
 	},
 	"version" : 
 	{
