@@ -14,11 +14,11 @@ namespace ABrush
     class FillTessellator
     {
     public:
-        void fill(Path *path, size_t size)
+        void fill(Flatten *flattens, size_t size)
         {
-            Path p = path[0];
-            const size_t num_points = p.points.size(); // 获得点数量
-            float *polygon_coordinates = p.store();
+            auto f = flattens[0];
+            const size_t num_points = f.points.size(); // 获得点数量
+            float *polygon_coordinates = f.store();
             TESStesselator *tesselator = tessNewTess(nullptr);
             if (!tesselator) {
                 // error
@@ -41,14 +41,13 @@ namespace ABrush
                               << std::endl;
                 }
                 std::cout << " };" << std::endl;
-                std::cout << "int indices[] = {";
+                std::cout << "int elements[] = {";
                 for (int i = 0; i < element_count; ++i) {
                     std::cout << elements[i * 3] << "," << elements[i * 3 + 1] << "," << elements[i * 3 + 2] << ","
                               << std::endl;
                 }
                 std::cout << "};";
             }
-
             tessDeleteTess(tesselator);
             free(polygon_coordinates);
         }

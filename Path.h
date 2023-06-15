@@ -58,7 +58,19 @@ namespace ABrush
     struct Flatten
     {
         std::vector<Point> points;
-        bool isClosed;
+        bool               isClosed;
+        [[nodiscard]] float *store() const
+        {
+            size_t points_count = points.size();
+            float  *m;
+            m = (float *) calloc(points_count * 2, sizeof(float));
+            for (int i = 0; i < points_count; ++i) {
+                m[i * 2]     = points.at(i).x;
+                m[i * 2 + 1] = points.at(i).y;
+            }
+            return m;
+        }
+
     };
 
     class Path
@@ -151,15 +163,15 @@ namespace ABrush
 
         Flatten *flatten()
         {
-            Flatten * flattens = (Flatten *) calloc(contours.size(), sizeof(Flatten));
-            int  ptIdx = 0;
-            int  PathCount = -1;
+            Flatten *flattens = (Flatten *) calloc(contours.size(), sizeof(Flatten));
+            int ptIdx     = 0;
+            int PathCount = -1;
 
             for (Command &cmd: commands) {
                 switch (cmd) {
 
                     case Command::MoveTo:
-                        PathCount+= 1;
+                        PathCount += 1;
                         flattens[PathCount].points.push_back(points.at(ptIdx));
                         ptIdx++;
                         break;
@@ -184,22 +196,7 @@ namespace ABrush
             }
             return flattens;
         }
-
-        [[nodiscard]] float *store() const
-        {
-            size_t points_count = points.size();
-            float  *m;
-            m = (float *) calloc(points_count * 2, sizeof(float));
-            for (int i = 0; i < points_count; ++i) {
-                m[i * 2]     = points.at(i).x;
-                m[i * 2 + 1] = points.at(i).y;
-            }
-            return m;
-        }
-
-
     };
-
 }
 
 #endif //ABRUSH_PATH_H
