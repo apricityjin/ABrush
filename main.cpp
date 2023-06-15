@@ -13,15 +13,16 @@ int main()
     Point p5   = Point(150.0, 100.0);
     Path  path = Path();
     path
-//            .moveTo(p0).lineTo(p1);
+            .moveTo(p0).lineTo(p1)
             .moveTo(p5).curveTo(p2, p3, p4).close();
 
-    Path * flattenPath = path.flatten();
+    Flatten * flattens = path.flatten();
 //    FillTessellator tessellator = FillTessellator();
-//    tessellator.fill(flattenPath);
+//    tessellator.fill(flattenPath, path.contours.size());
     StrokeTessellator tessellator = StrokeTessellator();
-    tessellator.line_join_style = StrokeTessellator::LineJoin::LineJoinBevel;
-    tessellator.stroke(flattenPath, path.contours.size());
-
+    tessellator.line_join_style = StrokeTessellator::LineJoin::LineJoinMiter;
+    tessellator.line_width = 5.0;
+    tessellator.line_cap_style = StrokeTessellator::LineCap::LineCapRound;
+    tessellator.stroke(flattens, path.contours.size());
     return 0;
 }

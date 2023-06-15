@@ -14,10 +14,11 @@ namespace ABrush
     class FillTessellator
     {
     public:
-        void fill(Path &path)
+        void fill(Path *path, size_t size)
         {
-            const size_t num_points = path.points.size(); // 获得点数量
-            float *polygon_coordinates = path.store();
+            Path p = path[0];
+            const size_t num_points = p.points.size(); // 获得点数量
+            float *polygon_coordinates = p.store();
             TESStesselator *tesselator = tessNewTess(nullptr);
             if (!tesselator) {
                 // error

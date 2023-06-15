@@ -55,6 +55,11 @@ namespace ABrush
         bezierPoints.emplace_back(end);
     }
 
+    struct Flatten
+    {
+        std::vector<Point> points;
+        bool isClosed;
+    };
 
     class Path
     {
@@ -144,10 +149,9 @@ namespace ABrush
             return *this;
         }
 
-        Path *flatten()
+        Flatten *flatten()
         {
-
-            Path *p = (Path *)calloc(contours.size(), sizeof(Path));
+            Flatten * flattens = (Flatten *) calloc(contours.size(), sizeof(Flatten));
             int  ptIdx = 0;
             int  PathCount = -1;
 
@@ -156,15 +160,15 @@ namespace ABrush
 
                     case Command::MoveTo:
                         PathCount+= 1;
-                        p[PathCount].points.push_back(points.at(ptIdx));
+                        flattens[PathCount].points.push_back(points.at(ptIdx));
                         ptIdx++;
                         break;
                     case Command::LineTo:
-                        p[PathCount].points.push_back(points.at(ptIdx));
+                        flattens[PathCount].points.push_back(points.at(ptIdx));
                         ptIdx++;
                         break;
                     case Command::CurveTo:
-                        bezier(p[PathCount].points,
+                        bezier(flattens[PathCount].points,
                                points.at(ptIdx - 1),
                                points.at(ptIdx),
                                points.at(ptIdx + 1),
@@ -172,12 +176,13 @@ namespace ABrush
                         ptIdx += 3;
                         break;
                     case Command::Close:
-                        p[PathCount].points.push_back(p[PathCount].points.at(0));
+                        flattens[PathCount].points.push_back(flattens[PathCount].points.at(0));
+                        flattens[PathCount].isClosed = true;
                         ptIdx++;
                         break;
                 }
             }
-            return p;
+            return flattens;
         }
 
         [[nodiscard]] float *store() const
