@@ -129,7 +129,8 @@
 				16,
 				17,
 				18,
-				19
+				19,
+				20
 			]
 		}
 	],
@@ -241,6 +242,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Gradient.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "stb/stb_image.h",
 			"sourceGroupIndex" : 1
 		}
 	],

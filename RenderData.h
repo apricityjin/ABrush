@@ -5,7 +5,6 @@
 #ifndef ABRUSH_RENDERDATA_H
 #define ABRUSH_RENDERDATA_H
 
-#include "Texture.h"
 #include <iostream>
 
 class RenderData

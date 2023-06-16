@@ -16,6 +16,9 @@ namespace ABrush
                 : rgba((a << 24) | (b << 16) | (g << 8) | r)
         {}
 
+        Color()
+        =default;
+
         [[nodiscard]] uint8_t r() const
         {
             return rgba & 0xFF;
@@ -34,6 +37,14 @@ namespace ABrush
         [[nodiscard]] uint8_t a() const
         {
             return (rgba >> 24) & 0xFF;
+        }
+
+        void setRGBA(uint8_t r, uint8_t g, uint8_t b, uint8_t a)
+        {
+            setR(r);
+            setG(g);
+            setB(b);
+            setA(a);
         }
 
         void setR(uint8_t r)

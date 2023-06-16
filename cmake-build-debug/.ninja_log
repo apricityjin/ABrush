@@ -1,21 +1,11 @@
 # ninja log v5
-5	383	1686818433115532683	CMakeFiles/ABrush.dir/main.cpp.o	18dd9541dc11e99d
-383	421	1686818433156325306	ABrush	45dd32ffd6ef7dca
+5	375	1686821512937464582	CMakeFiles/ABrush.dir/main.cpp.o	18dd9541dc11e99d
+375	413	1686821512977472213	ABrush	45dd32ffd6ef7dca
 6	45	1686741232060412127	CMakeFiles/ABrush.dir/libtess2/Source/bucketalloc.c.o	8abafafe50e1866e
 6	45	1686741232060309209	CMakeFiles/ABrush.dir/libtess2/Source/geom.c.o	75e7167579b3cc52
-0	51	1686820710632817021	build.ninja	dc22a15a30e3bd78
+0	51	1686896614686855990	build.ninja	dc22a15a30e3bd78
 7	48	1686741232063618309	CMakeFiles/ABrush.dir/libtess2/Source/priorityq.c.o	d81bca2c46d0126f
 6	33	1686741232047171270	CMakeFiles/ABrush.dir/libtess2/Source/dict.c.o	a44acb747b658581
 7	59	1686741232074318944	CMakeFiles/ABrush.dir/libtess2/Source/tess.c.o	e1a80eebf48f308a
 7	43	1686741232058140907	CMakeFiles/ABrush.dir/libtess2/Source/mesh.c.o	cefff9df25bc22fa
 7	54	1686741232068881835	CMakeFiles/ABrush.dir/libtess2/Source/sweep.c.o	a40c27ab43d4670d
-5	365	1686820940300734122	CMakeFiles/ABrush.dir/main.cpp.o	18dd9541dc11e99d
-365	409	1686820940346698789	ABrush	45dd32ffd6ef7dca
-5	374	1686820974653559217	CMakeFiles/ABrush.dir/main.cpp.o	18dd9541dc11e99d
-374	411	1686820974693649722	ABrush	45dd32ffd6ef7dca
-5	346	1686820997865774861	CMakeFiles/ABrush.dir/main.cpp.o	18dd9541dc11e99d
-346	381	1686820997902961994	ABrush	45dd32ffd6ef7dca
-6	369	1686821098509948618	CMakeFiles/ABrush.dir/main.cpp.o	18dd9541dc11e99d
-369	411	1686821098553824787	ABrush	45dd32ffd6ef7dca
-5	375	1686821512937464582	CMakeFiles/ABrush.dir/main.cpp.o	18dd9541dc11e99d
-375	413	1686821512977472213	ABrush	45dd32ffd6ef7dca
