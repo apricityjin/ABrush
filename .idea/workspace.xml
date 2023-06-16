@@ -21,11 +21,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93e3523a-c3bf-48d4-a5b2-9e72e4018036" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Builder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Color.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gradient.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RenderData.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Texture.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FillTessellator.h" beforeDir="false" afterPath="$PROJECT_DIR$/FillTessellator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Path.h" beforeDir="false" afterPath="$PROJECT_DIR$/Path.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StrokeTessellator.h" beforeDir="false" afterPath="$PROJECT_DIR$/StrokeTessellator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-7e232071ecca017c04b6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4ba1e503154bca029eea.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-06-14T11-13-39-0135.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ABrush-Debug-77668c53fe694b68434e.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ABrush" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ABrush" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ABrush.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ABrush.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +133,7 @@
       <workItem from="1686203729534" duration="29000" />
       <workItem from="1686203846216" duration="42556000" />
       <workItem from="1686386744048" duration="35475000" />
-      <workItem from="1686741218446" duration="22611000" />
+      <workItem from="1686741218446" duration="31171000" />
     </task>
     <servers />
   </component>
@@ -137,7 +154,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/StrokeTessellator.h</url>
-          <line>157</line>
+          <line>158</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>

@@ -59,6 +59,7 @@ namespace ABrush
     {
         std::vector<Point> points;
         bool               isClosed;
+        size_t size;
         [[nodiscard]] float *store() const
         {
             size_t points_count = points.size();
@@ -173,6 +174,7 @@ namespace ABrush
                     case Command::MoveTo:
                         PathCount += 1;
                         flattens[PathCount].points.push_back(points.at(ptIdx));
+                        flattens[PathCount].size = contours.size();
                         ptIdx++;
                         break;
                     case Command::LineTo:

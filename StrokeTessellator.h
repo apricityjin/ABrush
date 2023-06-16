@@ -31,9 +31,10 @@ namespace ABrush
         LineCap  line_cap_style  = LineCap::LineCapSquare;
         float    line_width      = 1.0;
 
-        void stroke(Flatten *flattens, size_t size)
+        void stroke(Flatten *flattens)
         {
             using namespace std;
+            size_t size = flattens[0].size;
             for (size_t pathIdx = 0; pathIdx < size; ++pathIdx) {
                 Flatten       &f      = flattens[pathIdx];
                 vector<Point> &points = f.points;

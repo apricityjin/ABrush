@@ -14,42 +14,45 @@ namespace ABrush
     class FillTessellator
     {
     public:
-        void fill(Flatten *flattens, size_t size)
+        void fill(Flatten *flattens)
         {
-            auto f = flattens[0];
-            const size_t num_points = f.points.size(); // 获得点数量
-            float *polygon_coordinates = f.store();
-            TESStesselator *tesselator = tessNewTess(nullptr);
-            if (!tesselator) {
-                // error
-                return;
-            }
-            tessAddContour(tesselator, 2, polygon_coordinates, sizeof(float) * 2, (int) num_points);
-            if (tessTesselate(tesselator, TESS_WINDING_NONZERO, TESS_POLYGONS, 3, 2, nullptr)) {
-                // 获取输出三角形数量、顶点数量
-                const int   element_count   = tessGetElementCount(tesselator);
-                const int   vertex_count    = tessGetVertexCount(tesselator);
-                // 获取输出顶点
-                const float *vertices       = tessGetVertices(tesselator);
-                const int   *elements       = tessGetElements(tesselator);
-                const int   *vertex_indices = tessGetVertexIndices(tesselator);
-                std::cout << "int element_count = " << element_count << ";" << std::endl;
-                std::cout << "int vertex_count = " << vertex_count << ";" << std::endl;
-                std::cout << "DMVertex vertices[] = { ";
-                for (int i = 0; i < vertex_count; ++i) {
-                    std::cout << "(DMVertex){ { " << vertices[i * 2] << "," << vertices[i * 2 + 1] << ",0,0 } },"
-                              << std::endl;
+            size_t size = flattens[0].size;
+            for (size_t i = 0; i < size; ++i) {
+                auto           f                    = flattens[i];
+                const size_t   num_points           = f.points.size(); // 获得点数量
+                float          *polygon_coordinates = f.store();
+                TESStesselator *tesselator          = tessNewTess(nullptr);
+                if (!tesselator) {
+                    // error
+                    return;
                 }
-                std::cout << " };" << std::endl;
-                std::cout << "int elements[] = {";
-                for (int i = 0; i < element_count; ++i) {
-                    std::cout << elements[i * 3] << "," << elements[i * 3 + 1] << "," << elements[i * 3 + 2] << ","
-                              << std::endl;
+                tessAddContour(tesselator, 2, polygon_coordinates, sizeof(float) * 2, (int) num_points);
+                if (tessTesselate(tesselator, TESS_WINDING_NONZERO, TESS_POLYGONS, 3, 2, nullptr)) {
+                    // 获取输出三角形数量、顶点数量
+                    const int   element_count   = tessGetElementCount(tesselator);
+                    const int   vertex_count    = tessGetVertexCount(tesselator);
+                    // 获取输出顶点
+                    const float *vertices       = tessGetVertices(tesselator);
+                    const int   *elements       = tessGetElements(tesselator);
+                    const int   *vertex_indices = tessGetVertexIndices(tesselator);
+                    std::cout << "int element_count = " << element_count << ";" << std::endl;
+                    std::cout << "int vertex_count = " << vertex_count << ";" << std::endl;
+                    std::cout << "DMVertex vertices[] = { " << std::endl;
+                    for (int j = 0; j < vertex_count; ++j) {
+                        std::cout << "(DMVertex){ { " << vertices[j * 2] << "," << vertices[j * 2 + 1] << ",0,0 } },"
+                                  << std::endl;
+                    }
+                    std::cout << " };" << std::endl;
+                    std::cout << "int elements[] = {" << std::endl;
+                    for (int j = 0; j < element_count; ++j) {
+                        std::cout << elements[j * 3] << "," << elements[j * 3 + 1] << "," << elements[j * 3 + 2] << ","
+                                  << std::endl;
+                    }
+                    std::cout << "};" << std::endl;
                 }
-                std::cout << "};";
+                tessDeleteTess(tesselator);
+                free(polygon_coordinates);
             }
-            tessDeleteTess(tesselator);
-            free(polygon_coordinates);
         }
     };
 }
