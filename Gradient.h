@@ -16,20 +16,12 @@ namespace ABrush
     class Gradient
     {
     public:
-
-        enum class GradientStyle : uint8_t
-        {
-            Linear,           // 线性渐变（一一对应进行颜色插值，颜色和坐标不对应就取size较小的那个）
-            Radial,           // 径向渐变（颜色沿由一个中心点向外的半径方向渐变。）
-        };
-
-        Gradient(GradientStyle style, const std::vector<Color> &colors, const std::vector<float> &locations)
-                : style(style), colors(colors), locations(locations)
+        Gradient(const std::vector<Color> &colors, const std::vector<float> &locations)
+                : colors(colors), locations(locations)
         {}
 
-        explicit Gradient(GradientStyle style)
-                : style(style)
-        {}
+        Gradient()
+        = default;
 
         /// 线性渐变需要颜色与坐标对应
         void add(const Color &color, const float &location)
@@ -38,7 +30,6 @@ namespace ABrush
             locations.push_back(location);
         }
 
-        GradientStyle      style;
         /// 储存颜色
         std::vector<Color> colors;
         /// 储存坐标 0.0 ~ 1.0

@@ -6,6 +6,8 @@
 #define ABRUSH_COLOR_H
 
 #include <iostream>
+#include <cstdint>
+#include <algorithm>
 
 namespace ABrush
 {
@@ -17,7 +19,7 @@ namespace ABrush
         {}
 
         Color()
-        =default;
+        = default;
 
         [[nodiscard]] uint8_t r() const
         {
@@ -70,5 +72,49 @@ namespace ABrush
         uint32_t rgba;
     };
 } // ABrush
+
+uint32_t rgbaScale(uint32_t rgba, float scale)
+{
+    unsigned char r = static_cast<unsigned char>((rgba >> 0) & 0xFF);
+    unsigned char g = static_cast<unsigned char>((rgba >> 8) & 0xFF);
+    unsigned char b = static_cast<unsigned char>((rgba >> 16) & 0xFF);
+    unsigned char a = static_cast<unsigned char>((rgba >> 24) & 0xFF);
+
+    r = static_cast<unsigned char>(r * scale);
+    g = static_cast<unsigned char>(g * scale);
+    b = static_cast<unsigned char>(b * scale);
+    a = static_cast<unsigned char>(a * scale);
+
+    return (a << 24) | (b << 16) | (g << 8) | r;
+}
+
+uint32_t rgbaAdd(uint32_t rgba1, uint32_t rgba2
+)
+{
+    unsigned char r1 = static_cast<unsigned char>((rgba1 >> 0) & 0xFF);
+    unsigned char g1 = static_cast<unsigned char>((rgba1 >> 8) & 0xFF);
+    unsigned char b1 = static_cast<unsigned char>((rgba1 >> 16) & 0xFF);
+    unsigned char a1 = static_cast<unsigned char>((rgba1 >> 24) & 0xFF);
+
+    unsigned char r2 = static_cast<unsigned char>((rgba2 >> 0) & 0xFF);
+    unsigned char g2 = static_cast<unsigned char>((rgba2 >> 8) & 0xFF);
+    unsigned char b2 = static_cast<unsigned char>((rgba2 >> 16) & 0xFF);
+    unsigned char a2 = static_cast<unsigned char>((rgba2 >> 24) & 0xFF);
+
+    unsigned char r = std::min(255, r1 + r2);
+    unsigned char g = std::min(255, g1 + g2);
+    unsigned char b = std::min(255, b1 + b2);
+    unsigned char a = std::min(255, a1 + a2);
+
+    return (a << 24) | (b << 16) | (g << 8) | r;
+}
+
+uint32_t rgbaInterpolation(ABrush::Color &color1, float percent1,
+                           ABrush::Color &color2, float percent2)
+{
+    uint32_t res = rgbaAdd(rgbaScale(color1.rgba, percent1),
+                           rgbaScale(color2.rgba, percent2));
+    return res;
+}
 
 #endif //ABRUSH_COLOR_H
