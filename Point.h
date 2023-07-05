@@ -165,7 +165,7 @@ namespace ABrush
             return !(*this == aVector2);
         }
 
-        float               x, y;
+        float x, y;
         static const size_t size = 2;
     };
 

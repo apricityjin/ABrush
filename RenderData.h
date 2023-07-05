@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-class RenderData
+struct RenderData
 {
 
     struct Vertex
@@ -16,12 +16,22 @@ class RenderData
         float u, v;
     };
 
-    RenderData(const std::vector<Vertex> &vertices, const std::vector<u_int32_t> &indices)
+    RenderData(const std::vector<Vertex> &vertices, const std::vector<uint16_t> &indices)
             : vertices(vertices), indices(indices)
     {}
 
+    RenderData()
+    =default;
+
+    // 每条线段都有offset，从0开始
+    std::vector<uint> vertex_offsets;
+    std::vector<uint> index_offsets;
+    // element 总数、 vertex 总数
+    uint index_count;
+    uint vertex_count;
+    // 直接将所有的vertices和indices往这两个vector塞
     std::vector<Vertex>   vertices;
-    std::vector<uint32_t> indices;
+    std::vector<uint16_t> indices;
 };
 
 

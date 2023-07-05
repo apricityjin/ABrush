@@ -50,67 +50,63 @@ namespace ABrush
         }
 
         /// 线性渐变（一一对应进行颜色插值，颜色和坐标数量不对应就取size较小的那个）
+        /// 这里取 start为 A，end为 B，需要计算的点为 P，P在 AB上垂点为 F
         uint32_t *drawLinearGradient(Gradient &g, Point &start, Point &end)
         {
+            uint32_t *gradientBuffer = g.buildLut();
+            uint32_t *gradientColorsBuffer = gradientBuffer + 1; // 指向颜色的内存，idx = 0 的颜色
+            uint32_t size = *gradientBuffer - 1;
+            float x1 = start.x, y1 = start.y;
+            // 从这里开始，A点坐标为 (0, 0)
+            float x2 = end.x - x1, y2 = end.y - y1;
+            float lenAB = sqrt(x2 * x2 + y2 * y2);
 
-            // count = 0 -> 不用渲染，count = 1 -> 只用渲染一种颜色， count >= 2 -> 颜色插值运算
-            uint32_t count   = std::min(g.colors.size(), g.locations.size());
-            uint32_t *buffer = nullptr;
-            if (count == 0) {
-                return nullptr;
-            } else if (count == 1) {
-                Color &c = g.colors[0];
-                buffer = (uint32_t *) calloc(1, sizeof(uint32_t));
-                *buffer = c.rgba;
-                return buffer;
-            } // count >= 2
-            // 默认切割256份
-            uint32_t size    = 256;
-            buffer = (uint32_t *) calloc(size, sizeof(uint32_t));
-            uint32_t *pointer = buffer;
-            int   l             = 0,
-                  r             = 1;
-            Color leftColor     = g.colors[l];
-            Color rightColor    = g.colors[r];
-            Color curColor      = leftColor;
-            float leftLocation  = g.locations[l];
-            float rightLocation = g.locations[r];
-            float curLocation;
-
-            for (int i = 0; i < size; ++i) {
-                curLocation = (float) i / (float) (size - 1);
-                if (curLocation < leftLocation) {
-                    *pointer++ = curColor.rgba;
-                    continue;
+            // 用苹果14作为例子，屏幕分辨率：2532 x 1170，逻辑分辨率：844 x 390 -> (y, x)
+            uint32_t *tex = (uint32_t *) calloc(844 * 390, sizeof(uint32_t));
+            uint32_t *pointer = tex;
+            for (float y = 0.0; y < 844.0; ++y) {
+                for (float x = 0.0; x < 390.0; ++x) {
+                    float x0 = x - x1, y0 = y - y1;
+                    float costheta = x2 / lenAB, sintheta = y2 / lenAB;
+                    float k = (x0 * costheta + y0 * sintheta) / lenAB; // k -> [0.0, 1.0]
+                    if (k > 1.0) {
+                        k = 1.0;
+                    } else if (k < 0.0) {
+                        k = 0.0;
+                    }
+                    uint32_t idx = size * k + 0.5; // 四舍五入
+                    uint32_t rgba = *(gradientColorsBuffer + idx);
+                    *pointer++ = rgba;
                 }
-                float len      = rightLocation - leftLocation,
-                      rPercent = (curLocation - leftLocation) / len,
-                      lPercent = 1 - rPercent;
-                uint32_t res = rgbaInterpolation(leftColor, lPercent, rightColor, rPercent);
-                *pointer++ = res;
             }
-
-            return buffer;
+            free(gradientBuffer);
         }
 
         /// 径向渐变（颜色沿由一个中心点向外的半径方向渐变。）
         uint32_t *drawRadialGradient(Gradient &g, Point &center, float radius)
         {
-            // 默认切割256份
-            uint32_t size    = 256;
-            uint32_t *buffer = (uint32_t *) calloc(size + 1, sizeof(uint32_t));
-
-            for (int i = 0; i < 256; ++i) {
-
+            uint32_t *gradientBuffer = g.buildLut();
+            uint32_t *gradientColorsBuffer = gradientBuffer + 1; // 指向颜色的内存，idx = 0 的颜色
+            uint32_t size = *gradientBuffer - 1;
+            // 用苹果14作为例子，屏幕分辨率：2532 x 1170，逻辑分辨率：844 x 390 -> (y, x)
+            uint32_t *tex = (uint32_t *) calloc(844 * 390, sizeof(uint32_t));
+            uint32_t *pointer = tex;
+            float x1 = center.x, y1 = center.y;
+            for (float y = 0.0; y < 844.0; ++y) {
+                for (float x = 0.0; x < 390.0; ++x) {
+                    float len = sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1));
+                    float k = len > radius ? 1.0 : len / radius;
+                    uint32_t idx = size * k + 0.5; // 四舍五入
+                    uint32_t rgba = *(gradientColorsBuffer + idx);
+                    *pointer++ = rgba;
+                }
             }
-
-            return buffer;
         }
 
-        Color             fillColor;
-        Color             strokeColor;
-        float             lineWidth = 1.0;
-        Image             *image    = nullptr;
+        Color fillColor;
+        Color strokeColor;
+        float lineWidth = 1.0;
+        Image *image = nullptr;
         std::vector<Path> paths;
     };
 }

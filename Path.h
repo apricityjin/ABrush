@@ -59,7 +59,7 @@ namespace ABrush
     {
         std::vector<Point> points;
         bool               isClosed;
-        size_t size;
+        size_t size; // 这个参数指的是Path内部的线条数，放在这里方便就这样写了，后续需要改
         [[nodiscard]] float *store() const
         {
             size_t points_count = points.size();

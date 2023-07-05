@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ABrush::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ABrush-Debug-ef0ede6ae8658a818a14.json",
+					"jsonFile" : "target-ABrush-Debug-30b4986cd712665200fe.json",
 					"name" : "ABrush",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/apricity/Desktop/GitHub/ABrush/cmake-build-debug",
-		"source" : "/Users/apricity/Desktop/GitHub/ABrush"
+		"build" : "/Users/ediothjin/Desktop/GitHub/ABrush/cmake-build-debug",
+		"source" : "/Users/ediothjin/Desktop/GitHub/ABrush"
 	},
 	"version" : 
 	{
