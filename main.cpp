@@ -18,22 +18,17 @@ int main()
             .moveTo(p0).lineTo(p1).lineTo(p2).lineTo(p4)
             .moveTo(p5).curveTo(p2, p3, p4).close();
 
+    RenderData data = RenderData();
     Flatten *flattens = path.flatten();
-    FillTessellator tessellator = FillTessellator();
-    RenderData data = tessellator.fill(flattens);
-//    StrokeTessellator tessellator = StrokeTessellator();
-//    tessellator.line_join_style = StrokeTessellator::LineJoin::LineJoinRound;
-//    tessellator.line_width = 10.0;
-//    tessellator.line_cap_style = StrokeTessellator::LineCap::LineCapRound;
-//    RenderData data = tessellator.stroke(flattens);
-/*
+//    FillTessellator tessellator = FillTessellator();
+//    tessellator.fill(flattens, data);
+    StrokeTessellator tessellator = StrokeTessellator();
+    tessellator.line_join_style = StrokeTessellator::LineJoin::LineJoinRound;
+    tessellator.line_width = 10.0;
+    tessellator.line_cap_style = StrokeTessellator::LineCap::LineCapRound;
+    tessellator.stroke(flattens, data);
+
     vector<Color> colors = {
-//            {11, 0,   0,   255},
-//            {0,   55, 0,   255},
-//            {0,   0,   66, 255},
-//            {22, 0,   0,   255},
-//            {0,   33, 0,   255},
-//            {0,   0,   44, 255},
             {11, 0, 0, 0},
             {55, 0, 0, 0},
             {66, 0, 0, 0},
@@ -50,9 +45,10 @@ int main()
 //            0.05,
     };
     Gradient g = Gradient(colors, locations);
-    Builder b = Builder();
+    data.colorsLut = g.buildLut();
+
+//    Builder b = Builder();
 //    b.drawLinearGradient(g, p0, p4);
 //    b.drawRadialGradient(g, p5, 50);
- */
     return 0;
 }

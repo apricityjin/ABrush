@@ -32,13 +32,12 @@ namespace ABrush
         LineCap line_cap_style = LineCap::LineCapSquare;
         float line_width = 1.0;
 
-        RenderData stroke(Flatten *flattens)
+        void stroke(Flatten *flattens, RenderData &data)
         {
             using namespace std;
             size_t size = flattens[0].size;
             uint vertex_offset = 0; // 顶点的偏移，只用在设置 indices 的时候添加
             uint index_offset = 0;
-            RenderData data = RenderData();
             for (size_t pathIdx = 0; pathIdx < size; ++pathIdx) {
                 Flatten &f = flattens[pathIdx];
                 vector<Point> &points = f.points;
@@ -391,7 +390,6 @@ namespace ABrush
                  * } // 只消耗 2 * 4 个字节就可以储存一个2D position
                  */
             }
-            return data;
         }
     };
 }

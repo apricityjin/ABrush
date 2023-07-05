@@ -32,6 +32,9 @@ struct RenderData
     // 直接将所有的vertices和indices往这两个vector塞
     std::vector<Vertex>   vertices;
     std::vector<uint16_t> indices;
+    /// size     + colors
+    /// uint32_t + ......(uint32_t * size)
+    uint32_t * colorsLut;
 };
 
 
