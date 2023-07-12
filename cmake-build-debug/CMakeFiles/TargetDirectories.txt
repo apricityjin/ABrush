@@ -1,3 +1,0 @@
-/Users/ediothjin/Desktop/GitHub/ABrush/cmake-build-debug/CMakeFiles/ABrush.dir
-/Users/ediothjin/Desktop/GitHub/ABrush/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/ediothjin/Desktop/GitHub/ABrush/cmake-build-debug/CMakeFiles/rebuild_cache.dir
